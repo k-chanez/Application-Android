@@ -1,16 +1,16 @@
 package com.example.quiz
 
-import android.content.Intent
+
+
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Window
-import android.widget.Toast
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.activity_quizz_game.*
-import kotlinx.android.synthetic.main.activity_secore.*
+import kotlinx.android.synthetic.main.activity_secore_.*
 import kotlinx.android.synthetic.main.activity_time_out.*
 
 class QuizzGame : AppCompatActivity() {
@@ -18,7 +18,7 @@ class QuizzGame : AppCompatActivity() {
     private lateinit var BonneReponse: String
     private lateinit var countDownTimer: CountDownTimer
     private var countDownProgress: Int = 100
-    private var length_level: Int = 6
+    private var length_level: Int = 14
     private var level: Int = 0
     private var Correct: Int = 0
     private var Incorrect: Int = 0
@@ -110,25 +110,28 @@ class QuizzGame : AppCompatActivity() {
     }
 
     fun secore() {
-        scor.text = Correct.toString()
-        repCorrect.text = Correct.toString()
-        repIncorrect.text = Incorrect.toString()
+        textView.text = Correct.toString()
+        repC.text = Correct.toString()
+        textView3.text = Incorrect.toString()
         var progress = 100 / length_level
         var progressTotal = Correct * progress
-        textScore.text = progressTotal.toString()
+        textPourcent.text = progressTotal.toString()
         circularProgressBar.apply {
             setProgressWithAnimation(progressTotal.toFloat(), 1000) // =1s
             progressBarColor = Color.GREEN
+        }
+
+        bt_rep.setOnClickListener {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setContentView(R.layout.activity_quizz_game)
         }
     }
 
     fun Check_level() {
         if (level >= length_level - 1) {
             countDownTimer.cancel()
-           // requestWindowFeature(Window.FEATURE_NO_TITLE)
-            setContentView(R.layout.activity_secore)
+            setContentView(R.layout.activity_secore_)
             secore()
-
         } else {
             level++
             readDatabase()

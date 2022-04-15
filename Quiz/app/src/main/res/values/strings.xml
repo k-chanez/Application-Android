@@ -2,4 +2,8 @@
     <string name="app_name">Quiz</string>
     <string name="ICI"> ICI </string>
     <string name="action_creation"> Creation_compte</string>
+    <string name="score">Score</string>
+    <string name="reponses_incorrectes">Reponses Incorrectes</string>
+    <string name="reponse_correctes">Reponse Correctes</string>
+    <string name="replay">Replay</string>
 </resources>

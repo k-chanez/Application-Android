@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/layout/activity_quizz_game.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_scor.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_secore.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_secore_.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_time_out.xml" value="0.33" />
         <entry key="app/src/main/res/layout/layout.xml" value="0.2269021739130435" />
@@ -22,7 +23,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
